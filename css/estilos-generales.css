@@ -1,0 +1,21 @@
+/*ESTILOS GENERALES -------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100;200;300;500;600;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+:root {
+    --color-verde1: #59a644;
+    --color-verde2: #71A658;
+    --color-verde3: #6a8c5a;
+    --color-gris: #333;
+    --color-negro: #0d0d0d;
+    --color-blanco: #fff;
+}
+
+/*-----------------------------------------------------------------------------------------------*/

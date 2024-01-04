@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--ETIQUETAS META-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--ETIQUETA TITULO-->
+<title>Grupo Alfacan | BLOG</title>
+
+<!--ETIQUETAS LINK-->
+<link rel="stylesheet" href="/css/estilos-menu.css">
+<link rel="stylesheet" href="/css/estilos-footer.css">
+<link rel="stylesheet" href="/cookies/css/estilos-cookies.css">
+
+<!--ETIQUETAS SCRIPT-->
+<script src="https://kit.fontawesome.com/347a447390.js" crossorigin="anonymous"></script>
+
+<script src="/cookies/js/aviso-cookies.js" defer></script>
+
+
+<!--FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100;200;300;500;600;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+
+<div class="contenedor-cabezera">
+    <img class="cabezera-img" src="/landing-page/assets/img/cabecera/logo-cabezera.webp" alt="Grupo Alfacan">
+</div>
+
+<body>
+    <div class="aviso-cookies" id="aviso-cookies">
+        <img class="galleta" src="/cookies/img/cookie.svg" alt="Galleta">
+        <h3 class="titulo">Cookies</h3>
+        <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+        <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+        <a class="enlace" target="_blank" rel="noopener" href="/cookies/aviso-cookies.html">Aviso de Cookies</a>
+    </div>
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+
+    <header>
+        <nav class="contenedor-menu">
+            <ul class="menu-links">
+                <li class="links">
+                    <a class="link" href="/index.html">Inicio</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------------------------------------------------------------------------------------->
+
+    <main class="contenedor-datos-blog">
+    </main>
+
+    <!------------------------------------------------------------------------------------------->
+
+
+</body>
+
+<div class="final-borde" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+        style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C150.00,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill:  rgba(0, 0, 0, 0.9)"></path>
+    </svg></div>
+<div class="contenedor-piedepagina">
+
+    <footer class="final">
+
+        <ul class="iconos-sociales">
+
+            <li><a rel="noopener" target="_blank" href="mailto:grupo.alfacan@gmail.com"><i id="ic2"
+                        class="fa-solid fa-envelope"></i></a></li>
+            <li><a rel="noopener" target="_blank" href="https://www.facebook.com/grupoalfacan.ga"><i id="ic3"
+                        class="fa-brands fa-facebook"></i></a></li>
+            <li><a rel="noopener" target="_blank" href="https://api.whatsapp.com/send?phone=7751488345"><i id="ic4"
+                        class="fa-brands fa-whatsapp"></i></a></li>
+
+        </ul>
+
+        <a class="privacidad" href="/html/privacidad.html">Aviso de privacidad</a>
+        <p>Todos los derechos reservados <i class="fa-regular fa-copyright"></i> Grupo Alfacan 2023</p>
+
+        <a rel="noopener" target="_blank" href="https://idpats.com/">
+            <div class="desarrollado">
+                <h6>Sitio Web desarollado por:</h6>
+            </div>
+            <div class="encabezado-idpats">
+                <div class="letras">
+                    <h3 class="letras-individual"><span class="letra-i">I</span></h3>
+                </div>
+                <div class="letras">
+                    <h3 class="letras-individual"><span class="letra-d">D</span></h3>
+                </div>
+                <div class="letras">
+                    <h3 class="letras-individual"><span class="letra-p">P</span></h3>
+                </div>
+                <div class="letras">
+                    <h3 class="letras-individual"><span class="letra-a">A</span></h3>
+                </div>
+                <div class="letras">
+                    <h3 class="letras-individual"><span class="letra-t">T</span></h3>
+                </div>
+                <div class="letras">
+                    <h3 class="letras-individual"><span class="letra-s">S</span></h3>
+                </div>
+            </div>
+        </a>
+    </footer>
+
+    <script>function cambiarColoresLetras() {
+            const letrasIndividuales = document.querySelectorAll('.letras-individual span');
+            const coloresEspecificos = ["#852362", "#005089", "#708c32", "#f2cb05", "#fff", "708c32"];
+            const coloresAleatorios = obtenerColoresAleatorios(letrasIndividuales.length, coloresEspecificos);
+
+            letrasIndividuales.forEach(function (letra, index) {
+                letra.style.color = coloresAleatorios[index];
+            });
+        }
+
+        function obtenerColoresAleatorios(length, colores) {
+            const coloresAleatorios = [];
+            while (coloresAleatorios.length < length) {
+                const colorIndex = Math.floor(Math.random() * colores.length);
+                coloresAleatorios.push(colores[colorIndex]);
+                colores.splice(colorIndex, 1); // Evita la repetición del mismo color
+            }
+            return coloresAleatorios;
+        }
+
+        // Cambia los colores cada 1 segundos (1000 milisegundos)
+        setInterval(cambiarColoresLetras, 1500);</script>
+
+
+</html>
