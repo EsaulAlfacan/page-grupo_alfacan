@@ -1,0 +1,165 @@
+/*ESTILOS GENERALES -------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100;200;300;500;600;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+:root {
+    --color-verde1: #59a644;
+    --color-verde2: #71A658;
+    --color-verde3: #6a8c5a;
+    --color-gris: #333;
+    --color-negro: #0d0d0d;
+    --color-blanco: #fff;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*ESTILOS DE LA SECCCIÓN: contenedor-cabezera*/
+.contenedor-cabezera {
+    background-color: var(--color-gris);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.contenedor-cabezera .cabezera-img {
+    height: 80px;
+}
+
+/*ESTILOS DE LA SECCCIÓN: contenedor-menu*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.contenedor-menu {
+    background-color: var(--color-negro);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    margin-right: 20px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--color-verde1);
+    animation: bounce 0.2s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/*MEDIA QUERYS*/
+
+/* Media query para mostrar el menú hamburguesa en pantallas más pequeñas */
+@media screen and (max-width: 680px) {
+    .contenedor-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--color-negro);
+        z-index: 1000;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link {
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 10px;
+        color: var(--color-blanco);
+        margin-top: 15px;
+    }
+
+    .hamburguesa {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .linea {
+        width: 30px;
+        height: 5px;
+        background-color: var(--color-blanco);
+        margin: 3px 0;
+    }
+
+    .menu-links-responsive {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .menu-links-responsive.activo {
+        max-height: 200px;
+    }
+
+    .menu-links.activo {
+        display: flex;
+    }
+}

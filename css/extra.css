@@ -1,0 +1,27 @@
+:root {
+    --color-greena: #59a644;
+    --color-greenb: #71A658;
+    --color-greenc: #6a8c5a;
+    --color-greengrey: #697363;
+    --color-greenablack: #0d0d0d;
+    --color-whitw: #fff;
+    --padding-container: 100px 0;
+    --color-title: #001A49;
+}
+
+/*Apartado de Nosotros */
+
+.frase_valores{
+    color: var(--color-greenc);
+    font-size: 20px;
+}
+
+/*Apartado de price */
+.items_img{
+    background-color: var(--color-whitw);
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+}
+
+/*Apartado de baner */
